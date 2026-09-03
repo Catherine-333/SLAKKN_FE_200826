@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    /* Univerrsal Selector */
+* { 
+    font-family: Arial;
+}
+/* Element Selector */
+body {
+    background-color: lightgray;
+}
+h1 {
+    text-algin: center;
+
+}
+/* Class Selector */
+.info {
+    color: green;
+}
+/* ID Selector */
+#skills {
+    color: green;
+}
+/* Grouping Selector */
+h1,h2 {
+    color: darkblue;
+}
+    
+</body>
+</html>
