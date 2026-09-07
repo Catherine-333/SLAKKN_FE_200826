@@ -1,0 +1,29 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    .logo{
+        width: 200px;;
+
+    }
+    
+    .parent{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        padding: 10px;
+    }
+    .img{
+        display: flex;
+    }
+
+    .searchinput{
+        width: 700px;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        background-color: beige;
+    }
