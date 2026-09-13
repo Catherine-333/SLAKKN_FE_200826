@@ -1,0 +1,102 @@
+{
+    margine:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.card {
+    width: 200px;
+    padding: 20px;
+    height: 100px;
+    border: 1px solid #b32222;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 8px gray;
+
+}
+.parent{
+    background-color: aqua;
+    padding: 20px;
+    border: #b32222;
+    display: flex;
+    justify-content: center;
+    justify-content: row;
+
+}
+main {
+    padding: 30px 40px;
+}
+
+main h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.main p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.categories button {
+    padding: 7px 12px;
+    background-color: #178f7bea;
+    border: 1px solid #484752;
+    border-radius: 4px;
+}
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-direction:row;
+}
+.card {
+    width: 230px;
+    height: 200px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: white;
+
+}
+
+    
+.boxs{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-direction:row;
+    
+        
+}
+.box{
+    width: 380px;
+    height: 330px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: white;
+
+}
+
+.logo{
+    display: flex;
+    gap: 200px;
+    flex-wrap: wrap;
+    justify-direction:row;
+    
+}
+
