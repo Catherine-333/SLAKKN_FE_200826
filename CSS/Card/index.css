@@ -1,0 +1,51 @@
+.parent{
+
+display:grid;
+gap: 20px;
+justify-content: center;
+margin:100px auto;
+grid-template-columns: repeat(4,1fr);
+border-radius: 10px;
+}
+.logo{
+    background-color: rgb(46, 168, 63);
+    width: 10 px;
+  border-radius: 10px;
+  border: 10px solid color(srgb red green blue)
+    padding: 10px;
+    border: none;
+
+
+
+}
+.login{
+    background-color: rgb(116, 91, 44);
+    width: 10 px;
+  border-radius: 10px;
+  border: 10px solid color(srgb red green blue)
+    padding: 10px;
+    border: none;
+
+
+}
+.dress{
+    background-color: rgb(51, 163, 107);
+    width: 10 px;
+  border-radius: 10px;
+  border: 10px solid color(srgb red green blue)
+    padding: 10px;
+    border: none;
+
+
+}
+.style{
+     background-color: rgb(116, 44, 100);
+    width: 10 px;
+  border-radius: 10px;
+  border: 10px solid color(srgb red green blue)
+    padding: 10px;
+    border: none;
+
+}
+ 
+ 

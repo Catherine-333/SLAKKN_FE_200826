@@ -1,0 +1,42 @@
+<h1>Swiggy</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Feature</th>
+    <th>Swiggy</th>
+   
+</tr>
+
+<tr>
+    <td>Main Service</td>
+    <td>Food Delivery</d>
+</tr>
+
+<tr>
+    <td>Online Ordering</td>
+    <td>Yes</td>
+    
+</tr>
+
+</table>
+
+<h2>Solutions</h2>
+
+<ul>
+    <li>Improve Delivery Management</li>
+    <li>Provide Better Customer Support</li>
+    <li>Maintain Fair Restaurant Policies</li>
+    <li>Support Delivery Partners</li>
+    <li>Improve Technology</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>
+Swiggy have changed the way people order food.
+However, they face challenges related to delivery costs,
+competition, restaurants, delivery partners and customer
+satisfaction. Better technology and efficient management
+can help overcome these challenges.
+</p>
