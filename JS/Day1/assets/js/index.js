@@ -1,0 +1,5 @@
+console.log("string,js,python")
+console.error("catherine")
+console.warn("Don't touch")
+document.write("catherine")
+console.log(20+2)
