@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Future Explorer</title>
+  
+  <!-- Tailwind CSS CDN: Enables Tailwind utility classes directly in the browser -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Optional Tailwind configuration for custom styling
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0a0f1d',
+            cardDark: '#131b2e',
+            borderDark: '#1e293b'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#0a0f1d] text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white">
+
+  <!-- ============================================================ -->
+  <!-- 1. NAVBAR SECTION -->
+  <!-- ============================================================ -->
+  <header class="sticky top-0 z-50 bg-[#0a0f1d]/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo / Brand Title -->
+        <a href="#home" class="flex items-center gap-2 group">
+          <!-- Glowing Sparkle Icon -->
+          <span class="p-2 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </span>
+          <span class="text-xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
+            AI Future <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Explorer</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+          <a href="#home" class="hover:text-white hover:text-blue-400 transition-colors">Home</a>
+          <a href="#ai-today" class="hover:text-white hover:text-blue-400 transition-colors">AI Today</a>
+          <a href="#future-2030" class="hover:text-white hover:text-purple-400 transition-colors">Future 2030</a>
+          <a href="#developer" class="hover:text-white hover:text-blue-400 transition-colors">Developer</a>
+          <a href="#ai-safety" class="hover:text-white hover:text-purple-400 transition-colors">AI Safety</a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" aria-label="Toggle menu" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <!-- Hamburger Icon -->
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Close Icon (hidden initially) -->
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-[#0d1527] px-4 pt-2 pb-4 space-y-2">
+      <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+      <a href="#ai-today" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">AI Today</a>
+      <a href="#future-2030" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Future 2030</a>
+      <a href="#developer" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Developer</a>
+      <a href="#ai-safety" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">AI Safety</a>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 2. HERO SECTION -->
+  <!-- ============================================================ -->
+  <section id="home" class="relative overflow-hidden py-24 sm:py-32">
+    <!-- Subtle Background Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Tag / Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-blue-400">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        Beginner Guide to Modern Artificial Intelligence
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+        Explore the <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Future of AI</span>
+      </h1>
+
+      <!-- Supporting Paragraph -->
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed mb-10">
+        Learn how Artificial Intelligence may change technology, jobs and software development.
+      </p>
+
+      <!-- Explore Future Button -->
+      <div class="flex justify-center">
+        <a href="#ai-today" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition duration-200">
+          <span>Explore Future</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3. AI TODAY SECTION -->
+  <!-- ============================================================ -->
+  <section id="ai-today" class="py-20 bg-slate-900/40 border-y border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">AI Today</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">
+          Leading organizations shaping current conversational intelligence and foundation models.
+        </p>
+      </div>
+
+      <!-- 3 Simple Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: OpenAI -->
+        <div class="group bg-[#131b2e] border border-slate-800 hover:border-blue-500/60 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">OpenAI</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            An AI research and deployment company known for creating ChatGPT and the GPT series of large language models for text and multimodal tasks.
+          </p>
+        </div>
+
+        <!-- Card 2: Anthropic -->
+        <div class="group bg-[#131b2e] border border-slate-800 hover:border-purple-500/60 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/10">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">Anthropic</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            An AI safety and research company that develops Claude, focusing on reliable, interpretable, and steerable AI systems with Constitutional AI.
+          </p>
+        </div>
+
+        <!-- Card 3: Google Gemini -->
+        <div class="group bg-[#131b2e] border border-slate-800 hover:border-blue-400/60 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-400/10">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">Google Gemini</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Google's flagship multimodal AI model built from the ground up to understand, operate across, and combine text, code, images, audio, and video.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 4. FUTURE 2030 SECTION -->
+  <!-- ============================================================ -->
+  <section id="future-2030" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-purple-400">The Decade Ahead</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-3">Future 2030</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">
+          How artificial intelligence will transform our daily lives, work, and security by the end of this decade.
+        </p>
+      </div>
+
+      <!-- 4 Simple Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: AI Agents -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-purple-500/60 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AI Agents</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Autonomous AI agents will plan and execute multi-step tasks across different software tools on our behalf. They will coordinate meetings, manage research, and automate complex workflows without constant human oversight. This will allow people to focus on higher-level creative strategy.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-purple-400 font-medium">
+            Autonomous workflows
+          </div>
+        </div>
+
+        <!-- Card 2: AI in Software Development -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-blue-500/60 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AI in Software Development</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Developers will work as architects alongside AI pair programmers that generate boilerplate, write tests, and fix bugs instantly. Natural language prompts will be translated directly into running full-stack applications. This will dramatically speed up prototyping and software delivery.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-blue-400 font-medium">
+            Next-gen coding
+          </div>
+        </div>
+
+        <!-- Card 3: AI in Education -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-purple-500/60 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AI in Education</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Every student will have access to an intelligent, 24/7 personalized tutor that adapts to their learning pace and curiosity. Complex subjects will be explained interactively through customized examples and instant feedback. High-quality education will become far more accessible worldwide.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-purple-400 font-medium">
+            Personalized learning
+          </div>
+        </div>
+
+        <!-- Card 4: AI in Cybersecurity -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-blue-500/60 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AI in Cybersecurity</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Security systems will detect and neutralize cyber threats in real-time before human analysts can even spot them. Intelligent defense models will continuously patch software vulnerabilities and prevent phishing attacks. AI will be both the frontline shield and sentinel for critical digital infrastructure.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-blue-400 font-medium">
+            Proactive protection
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 5. DEVELOPER ROADMAP SECTION -->
+  <!-- ============================================================ -->
+  <section id="developer" class="py-20 bg-slate-900/40 border-y border-slate-800/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-400">Step-by-Step Guide</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-3">Developer Roadmap</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">
+          The practical learning path from writing your first line of code to building smart AI applications.
+        </p>
+      </div>
+
+      <!-- Roadmap Flow -->
+      <div class="space-y-4">
+
+        <!-- Step 1: HTML & CSS -->
+        <div class="flex items-center gap-4 bg-[#131b2e] border border-slate-800 hover:border-blue-500/50 p-4 sm:p-5 rounded-2xl transition duration-200">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-500/30">
+            01
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">HTML & CSS</h3>
+            <p class="text-slate-400 text-sm">Build structure and visually style responsive layouts for the web.</p>
+          </div>
+        </div>
+
+        <!-- Arrow Indicator -->
+        <div class="flex justify-center text-purple-400 text-xl font-bold select-none">
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+
+        <!-- Step 2: JavaScript -->
+        <div class="flex items-center gap-4 bg-[#131b2e] border border-slate-800 hover:border-purple-500/50 p-4 sm:p-5 rounded-2xl transition duration-200">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm border border-purple-500/30">
+            02
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">JavaScript</h3>
+            <p class="text-slate-400 text-sm">Add interactivity, handle user events, and learn fundamental programming logic.</p>
+          </div>
+        </div>
+
+        <!-- Arrow Indicator -->
+        <div class="flex justify-center text-blue-400 text-xl font-bold select-none">
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+
+        <!-- Step 3: React -->
+        <div class="flex items-center gap-4 bg-[#131b2e] border border-slate-800 hover:border-blue-500/50 p-4 sm:p-5 rounded-2xl transition duration-200">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-500/30">
+            03
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">React</h3>
+            <p class="text-slate-400 text-sm">Create modern, reusable components and manage state in scalable single-page apps.</p>
+          </div>
+        </div>
+
+        <!-- Arrow Indicator -->
+        <div class="flex justify-center text-purple-400 text-xl font-bold select-none">
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+
+        <!-- Step 4: Backend -->
+        <div class="flex items-center gap-4 bg-[#131b2e] border border-slate-800 hover:border-purple-500/50 p-4 sm:p-5 rounded-2xl transition duration-200">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm border border-purple-500/30">
+            04
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">Backend</h3>
+            <p class="text-slate-400 text-sm">Build server-side logic and connect databases using Node.js or Python.</p>
+          </div>
+        </div>
+
+        <!-- Arrow Indicator -->
+        <div class="flex justify-center text-blue-400 text-xl font-bold select-none">
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+
+        <!-- Step 5: APIs -->
+        <div class="flex items-center gap-4 bg-[#131b2e] border border-slate-800 hover:border-blue-500/50 p-4 sm:p-5 rounded-2xl transition duration-200">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-500/30">
+            05
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">APIs</h3>
+            <p class="text-slate-400 text-sm">Send and receive data between frontend and backend services using REST & JSON.</p>
+          </div>
+        </div>
+
+        <!-- Arrow Indicator -->
+        <div class="flex justify-center text-purple-400 text-xl font-bold select-none">
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+
+        <!-- Step 6: AI APIs -->
+        <div class="flex items-center gap-4 bg-[#131b2e] border border-slate-800 hover:border-purple-500/50 p-4 sm:p-5 rounded-2xl transition duration-200">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm border border-purple-500/30">
+            06
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">AI APIs</h3>
+            <p class="text-slate-400 text-sm">Integrate language and image models from OpenAI, Anthropic, or Gemini into code.</p>
+          </div>
+        </div>
+
+        <!-- Arrow Indicator -->
+        <div class="flex justify-center text-blue-400 text-xl font-bold select-none">
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+
+        <!-- Step 7: AI Projects -->
+        <div class="flex items-center gap-4 bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-purple-500/60 p-4 sm:p-5 rounded-2xl shadow-lg shadow-purple-500/10">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold flex items-center justify-center text-sm shadow-md">
+            07
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-lg font-bold text-white">AI Projects</h3>
+            <p class="text-slate-300 text-sm">Deploy real-world AI applications like chatbots, smart assistants, and automated tools.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 6. AI SAFETY SECTION -->
+  <!-- ============================================================ -->
+  <section id="ai-safety" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-purple-400">Responsible Innovation</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-3">AI Safety</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">
+          Essential principles required to ensure artificial intelligence remains safe, beneficial, and aligned with human values.
+        </p>
+      </div>
+
+      <!-- 5 Simple Safety Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. Human control -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-blue-500/60 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Human Control</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Ensuring humans always maintain the ultimate decision-making power and oversight over critical AI actions and autonomous operations.
+          </p>
+        </div>
+
+        <!-- 2. Testing -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-purple-500/60 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Testing</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Conducting rigorous audits, stress tests, and adversarial red-teaming to find bugs, biases, and vulnerabilities before deployment.
+          </p>
+        </div>
+
+        <!-- 3. Privacy -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-blue-500/60 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Privacy</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Safeguarding user identity and confidential training data through strict encryption, anonymization, and permission controls.
+          </p>
+        </div>
+
+        <!-- 4. Security -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-purple-500/60 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Security</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Hardening AI pipelines against prompt injection attacks, data poisoning, and unauthorized system access.
+          </p>
+        </div>
+
+        <!-- 5. Responsible AI -->
+        <div class="bg-[#131b2e] border border-slate-800 hover:border-blue-500/60 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 sm:col-span-2 lg:col-span-1">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Responsible AI</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Building systems with fairness, transparency, and accountability so technology serves everyone equitably and ethically.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 7. FOOTER SECTION -->
+  <!-- ============================================================ -->
+  <footer class="border-t border-slate-800 bg-[#080c18] py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Brand / Slogan -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+            <span class="p-1.5 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </span>
+            <span class="font-bold text-white tracking-tight">AI Future Explorer</span>
+          </div>
+          <p class="text-slate-400 text-sm">
+            AI Future Explorer &ndash; Learn, Build and Explore
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+          <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+          <a href="#ai-today" class="hover:text-blue-400 transition-colors">AI Today</a>
+          <a href="#future-2030" class="hover:text-purple-400 transition-colors">Future 2030</a>
+          <a href="#developer" class="hover:text-blue-400 transition-colors">Developer</a>
+          <a href="#ai-safety" class="hover:text-purple-400 transition-colors">AI Safety</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="mt-8 pt-6 border-t border-slate-800/80 text-center text-xs text-slate-500">
+        &copy; <span id="year"></span> AI Future Explorer. Built for curious developers.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
