@@ -1,14 +1,14 @@
-const Student =()=>{
-    
-    return(<>
-    <div>
-        <p>Student Name<br>Catherine</br></p>
-        <p>Student Age<br>24</br></p> 
-        <p>Student Department<br>Full Stack Department</br></p>
-        <p>College Name<br>ARM college OF Engineering</br></p>
+
+const Student = () => {
+  return (
+    <div className="Design">
+      <h2>Student Details</h2>
+      <p>Student Name : Catherine</p>
+      <p>Student Age : 24</p>
+      <p>Department : CSE</p>
+      <p>College Name : ARM College of Engineering</p>
     </div>
-    
-    
-    </>)
+  )
 }
+
 export default Student
