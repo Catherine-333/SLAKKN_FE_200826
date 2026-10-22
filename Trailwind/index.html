@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffaf7;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #f8e8df;
+            color: #8b3f25;
+            padding: 25px;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 45px;
+        }
+
+        .day-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            min-height: 120px;
+        }
+
+        .day-card h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .task {
+            display: block;
+            width: 100%;
+            background-color: #f26522;
+            color: white;
+            text-align: center;
+            padding: 9px;
+            margin-top: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .task:hover {
+            background-color: #d94e0d;
+        }
+    </style>
+</head>
+
+    <h1>TrailWind Tasks</h1>
+
+    <div class="container">
+
+       
+        <div class="day-card">
+            <h2>Day-1</h2>
+            <a href="../Trailwind/Day1/index.html" class="task">Task-1</a>
+           
+        </div>
+
+       
+        <div class="day-card">
+            <h2>Day-2</h2>
+           <a href="../Trailwind/Day2/index.html" class="task">Task-1</a>
+        </div>
+       
+        <div class="day-card">
+            <h2>Day-3</h2>
+           <a href="../Trailwind/Day3/index.html" class="task">Task-1</a>
+        </div>
+        
+        <div class="day-card">
+            <h2>Day-4</h2>
+           <a href="../Trailwind/Day4/Myproject/index.html" class="task">Task-1</a>
+        </div>
+
+</html>

@@ -1,31 +1,31 @@
 
 
-let employees = JSON.parse(localStorage.getItem("employees")) || [];
 
 const formData = document.getElementById("formDatas");
 
 function displayEmployees() {
+  let employees = JSON.parse(localStorage.getItem("employees")) || [];
   const showing = document.getElementById("Showing");
 
-  showing.innerHTML = " ";
+  let data = ""
 
   employees.forEach((employee) => {
-    showing.innerHTML += `
+
+    data += `
       <tr>
         <td>${employee.userid}</td>
         <td>${employee.name}</td>
         <td>${employee.age}</td>
         <td>${employee.Course}</td>
         <td>${employee.Amount}</td>
-        <td>
-          <button onclick="deleteEmployee(${employee.userid})">
-            Delete
-          </button>
-        </td>
-      </tr>
-    `;
+      </tr>`;
+
+      showing.innerHTML = data
+
   });
 }
+
+displayEmployees()
 
 formData.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -55,6 +55,9 @@ formData.addEventListener("submit", (event) => {
     return;
   }
 
+
+let employees = JSON.parse(localStorage.getItem("employees")) || [];
+
   const obj = {
     userid: Date.now(),
     name: username,
@@ -63,16 +66,16 @@ formData.addEventListener("submit", (event) => {
     Amount: salary,
   };
 
+
 employees.push(obj);
 
 localStorage.setItem(
   "employees",
   JSON.stringify(employees)
 );
+
 formData.reset();
 
 
-  console.log(obj);
-  document.getElementById("Showing").textContent = JSON.stringify(obj);
+  displayEmployees()
 });
-

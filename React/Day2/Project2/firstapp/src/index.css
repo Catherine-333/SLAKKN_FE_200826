@@ -1,0 +1,63 @@
+.Head1{
+  background-color: aqua;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  
+ 
+}
+.Head{
+  background-color: blue;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+
+}
+
+
+.Head2{
+  background-color: orangered;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+
+}
+
+.Btn1{
+  background-color: rgb(230, 18, 177);
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.Btn2{
+ 
+  background-color: rgb(230, 18, 177);
+  padding: 5px;
+  border-radius: 10px;
+  grid-auto-columns: 10px;
+  
+}
+.Btn3{
+  background-color: rgb(214, 201, 211);
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.Btn4{
+  background-color: rgb(214, 201, 211);;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.Btn5{
+  background-color: rgb(18, 230, 113);
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.Btn6{
+  background-color: rgb(18, 230, 113);
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
