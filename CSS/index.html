@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,142 +16,313 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fffaf7;
+            background-color: #f4f8ff;
         }
 
-        h1 {
+        /* Header */
+        header {
             text-align: center;
-            background-color: #f8e8df;
-            color: #8b3f25;
+            background-color: #e0edff;
+            color: #174a8b;
             padding: 25px;
             margin: 0;
             font-size: 30px;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        /* Cards Layout */
         .container {
-            width: 80%;
+            width: 90%;
             margin: 40px auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 45px;
+            gap: 30px;
         }
 
+        /* Day Card */
         .day-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
             background-color: white;
             padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-            min-height: 120px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(40, 90, 160, 0.12);
+            min-height: 145px;
+            transition: all 0.3s ease;
         }
 
-        .day-card h2 {
-            margin-top: 0;
-            color: #333;
+        .day-card:hover {
+            transform: translateY(-7px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.20);
+            background-color: #f0f6ff;
+        }
+
+        /* CSS Image */
+        .day-image {
+            width: 65px;
+            height: 65px;
+            padding: 5px;
+            object-fit: contain;
+            border-radius: 12px;
+            background-color: #edf4ff;
+            transition: transform 0.3s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .day-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .day-content h2 {
+            margin: 0 0 12px;
+            color: #234675;
             font-size: 18px;
         }
 
+        /* Task Buttons */
         .task {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-            background-color: #f26522;
+            background-color: #2878e3;
             color: white;
             text-align: center;
-            padding: 9px;
+            padding: 10px 12px;
             margin-top: 10px;
-            border-radius: 20px;
+            border-radius: 22px;
             text-decoration: none;
             font-size: 13px;
+            transition: all 0.3s ease;
         }
 
         .task:hover {
-            background-color: #d94e0d;
+            background-color: #f26522;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(242, 101, 34, 0.25);
+        }
+
+        .task-icon {
+            margin-right: 6px;
+        }
+
+        .arrow {
+            font-size: 18px;
+        }
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 90%;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #174a8b;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>CSS TASKS</h1>
+    <header>
+        <h1>🎨 CSS TASKS</h1>
+    </header>
 
     <div class="container">
 
         <!-- Day 1 -->
         <div class="day-card">
-            <h2>Day-1</h2>
-            <a href="../CSS/Day1/task.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                 alt="CSS Logo">
+
+            <div class="day-content">
+                <h2>Day-1</h2>
+                <a href="../CSS/Day1/task.html" class="task">
+                    <span><span class="task-icon">🎨</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
         <!-- Day 2 -->
         <div class="day-card">
-            <h2>Day-2</h2>
-         <a href="../CSS/day2/" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"
+                 alt="Browser Logo">
+
+            <div class="day-content">
+                <h2>Day-2</h2>
+                <a href="../CSS/day2/" class="task">
+                    <span><span class="task-icon">🖌️</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
         <!-- Day 3 -->
         <div class="day-card">
-            <h2>Day-3</h2>
-           <a href="../CSS/day3/index.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                 alt="Code Editor Logo">
+
+            <div class="day-content">
+                <h2>Day-3</h2>
+                <a href="../CSS/day3/index.html" class="task">
+                    <span><span class="task-icon">💻</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
         <!-- Day 4 -->
         <div class="day-card">
-            <h2>Day-4</h2>
-           <a href="../CSS/Day4/Task1.html" class="task">Task-1</a>
-           <a href="../CSS/Day4/task2.html" class="task">Task-2</a>
-           <a href="../CSS/Day4/task3.html" class="task">Task-3</a>
-           <a href="../CSS/Day4/task4.html" class="task">Task-4</a>
-           <a href="../CSS/Day4/task5.html" class="task">Task-5</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                 alt="GitHub Logo">
+
+            <div class="day-content">
+                <h2>Day-4</h2>
+                <a href="../CSS/Day4/Task1.html" class="task"><span>🖌️ Task-1</span><span class="arrow">›</span></a>
+                <a href="../CSS/Day4/task2.html" class="task"><span>🎨 Task-2</span><span class="arrow">›</span></a>
+                <a href="../CSS/Day4/task3.html" class="task"><span>🖼️ Task-3</span><span class="arrow">›</span></a>
+                <a href="../CSS/Day4/task4.html" class="task"><span>✨ Task-4</span><span class="arrow">›</span></a>
+                <a href="../CSS/Day4/task5.html" class="task"><span>💻 Task-5</span><span class="arrow">›</span></a>
+            </div>
         </div>
 
         <!-- Day 5 -->
         <div class="day-card">
-            <h2>Day-5</h2>
-           <a href="../CSS/day5/pra.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                 alt="Google Logo">
+
+            <div class="day-content">
+                <h2>Day-5</h2>
+                <a href="../CSS/day5/pra.html" class="task">
+                    <span><span class="task-icon">✏️</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
         <!-- Day 6 -->
         <div class="day-card">
-            <h2>Day-6</h2>
-            <a href="../CSS/Day6/task1.html" class="task">Task-1</a>
-            <a href="../CSS/Day6/task2.html" class="task">Task-2</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg"
+                 alt="Browser Logo">
+
+            <div class="day-content">
+                <h2>Day-6</h2>
+                <a href="../CSS/Day6/task1.html" class="task"><span>🎨 Task-1</span><span class="arrow">›</span></a>
+                <a href="../CSS/Day6/task2.html" class="task"><span>🖌️ Task-2</span><span class="arrow">›</span></a>
+            </div>
         </div>
 
         <!-- Day 7 -->
         <div class="day-card">
-            <h2>Day-7</h2>
-            <a href="../CSS/Day7/Task1.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-original.svg"
+                 alt="Code Practice Logo">
+
+            <div class="day-content">
+                <h2>Day-7</h2>
+                <a href="../CSS/Day7/Task1.html" class="task">
+                    <span><span class="task-icon">💻</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
         <!-- Day 8 -->
         <div class="day-card">
-            <h2>Day-8</h2>
-            <a href="../CSS/Day8/Task1.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/safari/safari-original.svg"
+                 alt="Safari Logo">
+
+            <div class="day-content">
+                <h2>Day-8</h2>
+                <a href="../CSS/Day8/Task1.html" class="task">
+                    <span><span class="task-icon">🌐</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
         <!-- Day 9 -->
         <div class="day-card">
-            <h2>Day-9</h2>
-            <a href="../CSS/Day9/Task1.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"
+                 alt="Browser Logo">
+
+            <div class="day-content">
+                <h2>Day-9</h2>
+                <a href="../CSS/Day9/Task1.html" class="task">
+                    <span><span class="task-icon">🧩</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
-<!-- Practice -->
+        <!-- Practice -->
         <div class="day-card">
-            <h2>practise</h2>
-            <a href="../CSS/practice1/practice.html" class="task">Task-1</a>
-            <a href="../CSS/practice2/cath.html" class="task">Task-2</a>
-            <a href="../CSS/practise3/practice.html" class="task">Task-3</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-original.svg"
+                 alt="Practice Logo">
+
+            <div class="day-content">
+                <h2>Practice</h2>
+                <a href="../CSS/practice1/practice.html" class="task"><span>✏️ Task-1</span><span class="arrow">›</span></a>
+                <a href="../CSS/practice2/cath.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+                <a href="../CSS/practise3/practice.html" class="task"><span>🎯 Task-3</span><span class="arrow">›</span></a>
+            </div>
         </div>
-        <!-- Speacial class-->
+
+        <!-- Special Class -->
         <div class="day-card">
-            <h2>Special class</h2>
-            <a href="../CSS/special_class/index.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                 alt="Special Class Logo">
+
+            <div class="day-content">
+                <h2>Special Class</h2>
+                <a href="../CSS/special_class/index.html" class="task">
+                    <span><span class="task-icon">⭐</span> Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
         </div>
-
-
-
-
 
     </div>
 
+    <footer>
+        <h3>🎨 Keep Learning CSS!</h3>
+    </footer>
+
 </body>
-</html> 
+</html>

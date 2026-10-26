@@ -1,12 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Script</title>
-</head>
+    <title>React Tasks</title>
 
-    <body>
     <style>
         * {
             box-sizing: border-box;
@@ -15,83 +14,158 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fffaf7;
+            background-color: #f0fbff;
         }
 
         h1 {
             text-align: center;
-            background-color: #f8e8df;
-            color: #8b3f25;
+            background-color: #d9f5fb;
+            color: #087e9b;
             padding: 25px;
             margin: 0;
             font-size: 30px;
         }
 
         .container {
-            width: 80%;
+            width: 85%;
             margin: 40px auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 45px;
+            gap: 35px;
         }
 
         .day-card {
             background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-            min-height: 120px;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            min-height: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(8, 126, 155, 0.20);
+            border-color: #61d4e8;
+            background-color: #f7feff;
+        }
+
+        .day-image {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: 0.4s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: rotate(8deg) scale(1.12);
         }
 
         .day-card h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 18px;
+            margin: 5px 0 15px;
+            color: #087e9b;
+            font-size: 20px;
         }
 
         .task {
             display: block;
             width: 100%;
-            background-color: #f26522;
+            background-color: #16a6c2;
             color: white;
             text-align: center;
-            padding: 9px;
-            margin-top: 10px;
-            border-radius: 20px;
+            padding: 11px;
+            margin-top: 12px;
+            border-radius: 22px;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 14px;
+            transition: 0.3s ease;
         }
 
         .task:hover {
-            background-color: #d94e0d;
+            background-color: #087e9b;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(8, 126, 155, 0.25);
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                width: 90%;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 
-    <h1>React Tasks</h1>
+<body>
+
+    <h1>⚛️ React Tasks</h1>
 
     <div class="container">
 
-       
         <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Logo"
+                class="day-image"
+            >
             <h2>Day-1</h2>
-            <a href="../React/Day1/Project/firstapp/day1.html" class="task">Task-1</a>
-           
+            <a href="../React/Day1/Project/firstapp/day1.html" class="task">
+                Task-1
+            </a>
         </div>
 
-        
         <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
             <h2>Day-2</h2>
-           <a href="../React/Day2/Project/src/Components/Button.jsx" class="task">Task-1</a>
+            <a href="../React/Day2/Project/src/Components/Button.jsx" class="task">
+                Task-1
+            </a>
         </div>
-        
+
         <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML Logo"
+                class="day-image"
+            >
             <h2>Day-3</h2>
-           <a href="../React/Day3/Project/firstapp/src/Component/Button.jsx" class="task">Task-1</a>
-           <a href="../React/Day3/Task/firstapp/src/Component/Navbar.jsx" class = "task">Task-2</a>
-           
+            <a href="Day3/Task1/firstapp/dist/index.html" class="task">
+                Task-1
+            </a>
+            <a href="Day3/Task2/catherine/dist/index.html" class="task">
+                Task-2
+            </a>
+            <a href="Day3/Task3/firstapp/dist/index.html" class="task">
+                Task-3
+            </a>
+            <a href="Day3/Task4/firstapp/dist/index.html" class="task">
+                Task-4
+            </a>
+            <a href="Day3/Task5/firstapp/dist/index.html" class="task">
+                Task-5
+            </a>
         </div>
-       
-       
+
+    </div>
+
 </body>
 </html>

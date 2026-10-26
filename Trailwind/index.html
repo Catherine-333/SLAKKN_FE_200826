@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+    <title>Tailwind CSS Tasks</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -14,84 +16,221 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fffaf7;
+            background-color: #f0fcff;
         }
 
-        h1 {
+        /* Header */
+        header {
             text-align: center;
-            background-color: #f8e8df;
-            color: #8b3f25;
+            background-color: #d8f7fa;
+            color: #075985;
             padding: 25px;
+        }
+
+        header h1 {
             margin: 0;
             font-size: 30px;
         }
 
+        /* Card Layout */
         .container {
-            width: 80%;
+            width: 90%;
             margin: 40px auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 45px;
+            gap: 30px;
         }
 
+        /* Day Card */
         .day-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
             background-color: white;
-            padding: 20px;
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.12);
+            min-height: 145px;
+            transition: all 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-7px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(8, 145, 178, 0.25);
+            background-color: #e8fbff;
+        }
+
+        /* Images */
+        .day-image {
+            width: 70px;
+            height: 70px;
+            padding: 5px;
+            object-fit: contain;
             border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-            min-height: 120px;
+            background-color: #e0f7fa;
+            transition: transform 0.3s ease;
         }
 
-        .day-card h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 18px;
+        .day-card:hover .day-image {
+            transform: scale(1.15) rotate(-5deg);
         }
 
+        .day-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .day-content h2 {
+            margin: 5px 0 15px;
+            color: #075985;
+            font-size: 20px;
+        }
+
+        /* Task Button */
         .task {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-            background-color: #f26522;
+            background-color: #0d9488;
             color: white;
-            text-align: center;
-            padding: 9px;
+            padding: 10px 12px;
             margin-top: 10px;
-            border-radius: 20px;
+            border-radius: 22px;
             text-decoration: none;
             font-size: 13px;
+            transition: all 0.3s ease;
         }
 
         .task:hover {
-            background-color: #d94e0d;
+            background-color: #7c3aed;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 90%;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #075985;
         }
     </style>
 </head>
 
-    <h1>TrailWind Tasks</h1>
+<body>
 
+    <!-- Header -->
+    <header>
+        <h1>🌬️ TAILWIND CSS TASKS</h1>
+    </header>
+
+    <!-- Tasks Container -->
     <div class="container">
 
-       
+        <!-- Day 1 -->
         <div class="day-card">
-            <h2>Day-1</h2>
-            <a href="../Trailwind/Day1/index.html" class="task">Task-1</a>
-           
+
+            <img
+                class="day-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS Logo">
+
+            <div class="day-content">
+                <h2>Day-1</h2>
+
+                <a href="../Trailwind/Day1/index.html" class="task">
+                    <span>🎨 Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
+
         </div>
 
-       
+        <!-- Day 2 -->
         <div class="day-card">
-            <h2>Day-2</h2>
-           <a href="../Trailwind/Day2/index.html" class="task">Task-1</a>
-        </div>
-       
-        <div class="day-card">
-            <h2>Day-3</h2>
-           <a href="../Trailwind/Day3/index.html" class="task">Task-1</a>
-        </div>
-        
-        <div class="day-card">
-            <h2>Day-4</h2>
-           <a href="../Trailwind/Day4/Myproject/index.html" class="task">Task-1</a>
+
+            <img
+                class="day-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML Logo">
+
+            <div class="day-content">
+                <h2>Day-2</h2>
+
+                <a href="../Trailwind/Day2/index.html" class="task">
+                    <span>💻 Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
+
         </div>
 
+        <!-- Day 3 -->
+        <div class="day-card">
+
+            <img
+                class="day-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code Logo">
+
+            <div class="day-content">
+                <h2>Day-3</h2>
+
+                <a href="../Trailwind/Day3/index.html" class="task">
+                    <span>🖌️ Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-card">
+
+            <img
+                class="day-image"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Logo">
+
+            <div class="day-content">
+                <h2>Day-4</h2>
+
+                <a href="../Trailwind/Day4/Myproject/index.html" class="task">
+                    <span>🚀 Task-1</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <h3>✨ Keep Learning Tailwind CSS!</h3>
+    </footer>
+
+</body>
 </html>

@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Script</title>
-</head>
+    <title>JavaScript Tasks</title>
 
-    <body>
     <style>
         * {
             box-sizing: border-box;
@@ -15,132 +15,421 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fffaf7;
+            background-color: #fffdf0;
         }
 
-        h1 {
+        /* Header */
+        header {
             text-align: center;
-            background-color: #f8e8df;
-            color: #8b3f25;
+            background-color: #fff1a8;
+            color: #805600;
             padding: 25px;
+        }
+
+        header h1 {
             margin: 0;
             font-size: 30px;
         }
 
+        /* Card Layout */
         .container {
-            width: 80%;
+            width: 90%;
             margin: 40px auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 45px;
+            gap: 30px;
         }
 
+        /* Day Card */
         .day-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
             background-color: white;
-            padding: 20px;
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(150, 120, 0, 0.12);
+            min-height: 145px;
+            transition: all 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-7px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(202, 138, 4, 0.25);
+            background-color: #fffbea;
+        }
+
+        /* Images */
+        .day-image {
+            width: 65px;
+            height: 65px;
+            padding: 5px;
+            object-fit: contain;
             border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-            min-height: 120px;
+            background-color: #fff6cf;
+            transition: transform 0.3s ease;
         }
 
-        .day-card h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 18px;
+        .day-card:hover .day-image {
+            transform: scale(1.15) rotate(-5deg);
         }
 
+        .day-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .day-content h2 {
+            margin: 5px 0 12px;
+            color: #805600;
+            font-size: 20px;
+        }
+
+        /* Task Buttons */
         .task {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-            background-color: #f26522;
-            color: white;
-            text-align: center;
-            padding: 9px;
+            background-color: #eab308;
+            color: #422006;
+            padding: 10px 12px;
             margin-top: 10px;
-            border-radius: 20px;
+            border-radius: 22px;
             text-decoration: none;
             font-size: 13px;
+            transition: all 0.3s ease;
         }
 
         .task:hover {
-            background-color: #d94e0d;
+            background-color: #7c3aed;
+            color: white;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 90%;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #805600;
         }
     </style>
 </head>
 
-    <h1>Java Script Tasks</h1>
+<body>
+
+    <header>
+        <h1>⚡ JAVASCRIPT TASKS</h1>
+    </header>
 
     <div class="container">
 
-       
+        <!-- Day 1 -->
         <div class="day-card">
-            <h2>Day-1</h2>
-            <a href="../JS/Day1/index.html" class="task">Task-1</a>
-           
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                 alt="JavaScript Logo">
+
+            <div class="day-content">
+                <h2>Day-1</h2>
+                <a href="../JS/Day1/index.html" class="task">
+                    <span>⚡ Task-1</span><span class="arrow">›</span>
+                </a>
+            </div>
         </div>
 
-        
+        <!-- Day 2 -->
         <div class="day-card">
-            <h2>Day-2</h2>
-           <a href="../JS/Day2/index.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                 alt="HTML Logo">
+
+            <div class="day-content">
+                <h2>Day-2</h2>
+                <a href="../JS/Day2/index.html" class="task">
+                    <span>💻 Task-1</span><span class="arrow">›</span>
+                </a>
+            </div>
         </div>
-        
+
+        <!-- Day 3 -->
         <div class="day-card">
-            <h2>Day-3</h2>
-           <a href="../JS/Day3/index.html" class="task">Task-1</a>
-           <a href="../JS/Day3/task1to5.html"class="task">task-2</a>
-           <a href="../JS/Day3/task1_5.html" class="task">task-3</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                 alt="VS Code Logo">
+
+            <div class="day-content">
+                <h2>Day-3</h2>
+                <a href="../JS/Day3/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day3/task1to5.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+                <a href="../JS/Day3/task1_5.html" class="task"><span>📄 Task-3</span><span class="arrow">›</span></a>
+            </div>
         </div>
-       
+
+        <!-- Day 4 -->
         <div class="day-card">
-            <h2>Day-4</h2>
-           <a href="../JS/Day4/index.html" class="task">Task-1</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                 alt="GitHub Logo">
+
+            <div class="day-content">
+                <h2>Day-4</h2>
+                <a href="../JS/Day4/index.html" class="task"><span>⚙️ Task-1</span><span class="arrow">›</span></a>
+            </div>
         </div>
 
+        <!-- Day 5 -->
         <div class="day-card">
-            <h2>Day-5</h2>
-           <a href="../JS/Day5/index.html" class="task">Task-1</a>
-           <a href="../JS/Day5/task.html" class="task">Task-2</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"
+                 alt="Chrome Logo">
+
+            <div class="day-content">
+                <h2>Day-5</h2>
+                <a href="../JS/Day5/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day5/task.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
         </div>
 
-         <div class="day-card">
-            <h2>Day-6</h2>
-           <a href="../JS/Day6/index.html" class="task">Task-1</a>
-           <a href="../JS/Day6/task.html" class="task">Task-2</a>
-        </div>
-
-      <div class="day-card">
-            <h2>Day-7</h2>
-           <a href="../JS/Day7/index.html" class="task">Task-1</a>
-           <a href="../JS/Day7/task.html" class="task">Task-2</a>
-        </div>
-
+        <!-- Day 6 -->
         <div class="day-card">
-            <h2>Day-8</h2>
-           <a href="../JS/Day8/index.html" class="task">Task-1</a>
-           <a href="../JS/Day8/task.html" class="task">Task-2</a>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg"
+                 alt="Firefox Logo">
+
+            <div class="day-content">
+                <h2>Day-6</h2>
+                <a href="../JS/Day6/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day6/task.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
         </div>
 
-
+        <!-- Day 7 -->
         <div class="day-card">
-        <h2>Day-9</h2>
-         <a href="../JS/Test/DocScanner 03-10-2026 5-49 pm.pdf" class="task">Task-1</a>
-      </div>
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-original.svg"
+                 alt="CodePen Logo">
 
-         <div class="day-card">
-        <h2>Day-10</h2>
-         <a href="../JS/Day10/asset/js/index.js" class="task">Task-1</a>
-      </div>
-         <div class="day-card">
-        <h2>Day-11</h2>
-         <a href="../JS/Day11/asset/js/index.js" class="task">Task-1</a>
-      </div>
-         <div class="day-card">
-        <h2>Day-12</h2>
-         <a href="../JS/Day12/Practice/index.html" class="task">Practice</a>
-         <a href="../JS/Day12/Task-1/task1.html" class="task">Task-1</a>
-         <a href="../JS/Day12/Task-2/task2.html" class="task">Task-2</a>
-         <a href="../JS/Day12/Task-3/task3.html" class="task">Task-3</a>
-      </div>
+            <div class="day-content">
+                <h2>Day-7</h2>
+                <a href="../JS/Day7/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day7/task.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                 alt="Node.js Logo">
+
+            <div class="day-content">
+                <h2>Day-8</h2>
+                <a href="../JS/Day8/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day8/task.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                 alt="JavaScript Logo">
+
+            <div class="day-content">
+                <h2>Day-9</h2>
+                <a href="../JS/Test/DocScanner 03-10-2026 5-49 pm.pdf" class="task">
+                    <span>📑 Task-1 (PDF)</span><span class="arrow">›</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                 alt="VS Code Logo">
+
+            <div class="day-content">
+                <h2>Day-10</h2>
+                <a href="../JS/Day10/asset/js/index.js" class="task">
+                    <span>📄 Task-1</span><span class="arrow">›</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Day 11 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                 alt="Git Logo">
+
+            <div class="day-content">
+                <h2>Day-11</h2>
+                <a href="../JS/Day11/asset/js/index.js" class="task">
+                    <span>📄 Task-1</span><span class="arrow">›</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Day 12 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                 alt="React Logo">
+
+            <div class="day-content">
+                <h2>Day-12</h2>
+                <a href="../JS/Day12/Practice/index.html" class="task"><span>✏️ Practice</span><span class="arrow">›</span></a>
+                <a href="../JS/Day12/Task-1/task1.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day12/Task-2/task2.html" class="task"><span>⚡ Task-2</span><span class="arrow">›</span></a>
+                <a href="../JS/Day12/Task-3/task3.html" class="task"><span>⚡ Task-3</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                 alt="Node.js Logo">
+
+            <div class="day-content">
+                <h2>Day-13</h2>
+                <a href="../JS/Day13/Task1/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day13/Task2/index.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+                <a href="../JS/Day13/Task3/index.html" class="task"><span>⚡ Task-3</span><span class="arrow">›</span></a>
+                <a href="../JS/Day13/Task4/index.html" class="task"><span>⚡ Task-4</span><span class="arrow">›</span></a>
+                <a href="../JS/Day13/Task5/index.html" class="task"><span>⚡ Task-5</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                 alt="React Logo">
+
+            <div class="day-content">
+                <h2>Day-14</h2>
+                <a href="../JS/Day14/Task1/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day14/Task2/index.html" class="task"><span>⚡ Task-2</span><span class="arrow">›</span></a>
+                <a href="../JS/Day14/Task3/index.html" class="task"><span>⚡ Task-3</span><span class="arrow">›</span></a>
+                <a href="../JS/Day14/Task4/index.html" class="task"><span>📝 Task-4</span><span class="arrow">›</span></a>
+                <a href="../JS/Day14/Task5/index.html" class="task"><span>⚡ Task-5</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 15 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                 alt="HTML Logo">
+
+            <div class="day-content">
+                <h2>Day-15</h2>
+                <a href="../JS/Day15/Array-Rendaring/index.html" class="task"><span>⚡ Array-Rendaring</span><span class="arrow">›</span></a>
+                <a href="../JS/Day15/Object-Rendaring/index.html" class="task"><span> 📝Object-Rendaring</span><span class="arrow">›</span></a>
+                <a href="../JS/Day15/Task1/index.html" class="task"><span>⚡ Task1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day15/Task2/index.html" class="task"><span> ⚡ Task2</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 16 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                 alt="CSS Logo">
+
+            <div class="day-content">
+                <h2>Day-16</h2>
+                <a href="../JS/Day16/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day16/index.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+
+            </div>
+        </div>
+
+        <!-- Day 17 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                 alt="Bootstrap Logo">
+
+            <div class="day-content">
+                <h2>Day-17</h2>
+                <a href="../JS/Day17/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day17/Register.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 18 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                 alt="Tailwind CSS Logo">
+
+            <div class="day-content">
+                <h2>Day-18</h2>
+                <a href="../JS/Day18/Task1/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day18/Task2/index.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+                <a href="../JS/Day18/Task3/index.html" class="task"><span>⚡Task-3</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 19 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                 alt="MongoDB Logo">
+
+            <div class="day-content">
+                <h2>Day-19</h2>
+                <a href="../JS/Day19/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day19/index.html" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+        <!-- Day 20 -->
+        <div class="day-card">
+            <img class="day-image"
+                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                 alt="Express Logo">
+
+            <div class="day-content">
+                <h2>Day-20</h2>
+                <a href="../JS/Day20/index.html" class="task"><span>⚡ Task-1</span><span class="arrow">›</span></a>
+                <a href="../JS/Day20/assest/js/index.js" class="task"><span>📝 Task-2</span><span class="arrow">›</span></a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h3>✨ Keep Learning JavaScript!</h3>
+    </footer>
+
 </body>
 </html>
