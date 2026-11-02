@@ -1,52 +1,88 @@
-import { useState } from "react";
+import {useState} from "react"
 
 const App = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [number, setNumber] = useState("");
+  const [name , setName] = useState ("")
+  const [age , setAge] = useState ("")
+  const [mobile , setMobile] = useState ("")
+  const [data , setData] = useState([])
 
-  const [showDatas, setShowDatas] = useState("");
-  const [showDatas1, setShowDatas1] = useState("");
-  const [showDatas2, setShowDatas2] = useState("");
 
-  const handleClick = (e) => {
+
+  const handlechangename = (e)=>{
+    setName(e.target.value)
+  }
+
+  const handlechangeage = (e)=>{
+    setAge(e.target.value)
+  }
+
+
+  const handlechangemobile = (e)=>{
+    setMobile(e.target.value)
+  }
+
+  const handleclick = (e) =>{
     e.preventDefault();
 
-    
-    setShowDatas(name);
-    setShowDatas1(age);
-    setShowDatas2(number);
+
+    const datas = {id:Date.now(),name:name, age:age , mobile:mobile};
+
+      let copy = [...data];
+      copy.push(datas);
+      setData(copy);
+
+
+
+      setName("");
+      setAge("");
+      setMobile("");
+
+
   };
 
+  
+
+
+
+
+
+
   return (
+
     <>
-      <form onSubmit={handleClick}>
-        <input
-          type="text"
-          placeholder="Enter the Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Enter the Age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Enter the Number"
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-        />
-        <button type="submit">Submit</button>
-      </form>
-
-      <p>{showDatas}</p>
-      <p>{showDatas1}</p>
-      <p>{showDatas2}</p>
+    <div>
+      <input type="text" value={name} onChange={handlechangename} />
+      <input type="text" value={age} onChange={handlechangeage} />
+      <input type="text" value={mobile} onChange={handlechangemobile} />
+      <button onClick={handleclick}>submit</button>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td>S.NO</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Mobile</td>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((e,i)=>(
+            <tr>
+              <td>{e.id}</td>
+              <td>{e.name}</td>
+              <td>{e.age}</td>
+              <td>{e.mobile}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    
+    
     </>
-  );
-};
 
-export default App;
+  )
+}
+
+export default App
