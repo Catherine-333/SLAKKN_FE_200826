@@ -1,10 +1,14 @@
-import Todo from "./Component/Todo"
+
+import Fetch from "./Component/Fetch"
+
 
 const App = () => {
   return (
    <>
 
-   <Todo/>
+   <Fetch/>
+  
+  
    </>
   )
 }
