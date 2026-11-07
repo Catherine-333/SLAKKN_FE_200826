@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -61,25 +62,13 @@ navigate("/")
          setUserEmail("")
          setUserPassword("")
 
-         
-         
-       
-  
-         
-
-
-
-
     }
-
-
-
 
   return (
     <>
     <div className='bg-gray-100 p-10 flex flex-col justify-center items-center h-100' >
         <div className='bg-white shadow rounded p-4 w-110'>
-            <h2 className='text-3xl mb-2'>Register</h2>
+            <h2 className='text-3xl mb-2'>Login</h2>
             <p>Login Here if Already Regsiter!!</p>
             <p className='text-red-500'>{error}</p>
         </div>
@@ -101,4 +90,3 @@ navigate("/")
 }
 
 export default Login
-
