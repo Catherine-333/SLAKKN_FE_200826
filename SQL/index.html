@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0fbff;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #d9f5fb;
+            color: #087e9b;
+            padding: 25px;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .day-card {
+            background-color: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            min-height: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(8, 126, 155, 0.20);
+            border-color: #61d4e8;
+            background-color: #f7feff;
+        }
+
+        .day-image {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: 0.4s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: rotate(8deg) scale(1.12);
+        }
+
+        .day-card h2 {
+            margin: 5px 0 15px;
+            color: #087e9b;
+            font-size: 20px;
+        }
+
+        .task {
+            display: block;
+            width: 100%;
+            background-color: #16a6c2;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            margin-top: 12px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .task:hover {
+            background-color: #087e9b;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(8, 126, 155, 0.25);
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                width: 90%;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>SQL Tasks</h1>
+
+    <div class="container">
+
+        <!-- Day 1 - HTML -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML Logo"
+                class="day-image"
+            >
+
+            <h2>Day-1</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day1/Project/firstapp" class="task" target=_blank>
+                Task-1
+            </a>
+
+        </div>
+
+
+        <!-- Day 2 - CSS -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS Logo"
+                class="day-image"
+            >
+
+            <h2>Day-2</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day2/Project" class="task" target=_blank>
+                Task-1
+            </a>
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day2/Project2/firstapp" class="task" target=_blank>
+                Task-2
+            </a>
+             <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day2/Task/firstapp" class="task" target=_blank>
+                Task-3
+            </a>
+
+        </div>
+
+
+        <!-- Day 3 - JavaScript -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+
+            <h2>Day-3</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day3/Task1/firstapp" class="task" target="_blank">
+                Task-1
+            </a>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day3/Task2/catherine" class="task" target="_blank">
+                Task-2
+            </a>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day3/Task3/firstapp" class="task" target="_blank">
+                Task-3
+            </a>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day3/Task4/firstapp" class="task" target="_blank">
+                Task-4
+            </a>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day3/Task5/firstapp" class="task"  target="_blank">
+                Task-5
+            </a>
+
+        </div>
+
+
+        <!-- Day 4 - React -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Logo"
+                class="day-image"
+            >
+
+            <h2>Day-4</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day4/React-Router/Catherine" class="task" target="_blank">Task-1
+             
+            </a>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/bd5b9535352a9da82359915deb5055b301a315a4/React/Day4/Task/Project/jesus" class="task" target="_blank">
+                Task-2
+            </a>
+
+        </div>
+
+
+        <!-- Day 5 - Node.js -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js Logo"
+                class="day-image"
+            >
+
+            <h2>Day-5</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day5/React-Rendaring/my-app/src" class="task" target="_blank">Task-1
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/blob/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day5/React-Rendaring/my-app/src/Component/Navbar.jsx" class="task" target="_blank">Task-2</a>
+            </a>
+
+        </div>
+
+
+        <!-- Day 6 - GitHub -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub Logo"
+                class="day-image"
+            >
+
+            <h2>Day-6</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day6/Project/task/src" class="task" target="_blank">Task-1</a>
+             <a href=".https://github.com/Catherine-333/SLAKKN_FE_200826/blob/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day6/Project/task/src/Component/Boolean.jsx" class="task" target="_blank">Task-2</a> 
+             <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/blob/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day6/Project/task/src/Component/Navbar.jsx" class="task" target="_blank">Task-3</a>  
+               
+      
+
+        </div>
+
+
+        <!-- Day 7 - Bootstrap -->
+        <div class="day-card">
+
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap Logo"
+                class="day-image"
+            >
+
+            <h2>Day-7</h2>
+
+            <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day7/Array-of-Rendaring/ArrayobjectRendaring/src" class="task" target="_blank">Task-1</a>
+             <a href ="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day7/Tasks/Task1/Array%20Rendering"class="task" target="_blank">Task-2</a>
+             <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/blob/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day7/Array-of-Rendaring/ArrayobjectRendaring/src/Component/Student.jsx" class="task" target="_blank">Task-3</a>
+             <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day7/Tasks/Task2/Object%20Rendering" class="task" target="_blank">Task-4</a>
+             <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day7/Tasks/Task4/Props%20Passing" class="task" target="_blank">Task-5</a>
+             <a href="https://github.com/Catherine-333/SLAKKN_FE_200826/tree/3b63309f64cbcb7575ef1559e61e7f0e789c85c7/React/Day7/Tasks/Task5/Array%20of%20Objects%20with%20Props" class="task" target="_blank">Task-6</a>
+        </div>
+
+</body>
+
+</html>
